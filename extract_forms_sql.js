@@ -93,7 +93,13 @@ function showInteractiveMenu() {
       console.log(`✅ Seleccionado: ${selectedFile}`);
       
       rl.question('\n📄 Nombre del archivo SQL de salida (Enter para usar el nombre por defecto): ', (outputAnswer) => {
-        const outputFile = outputAnswer.trim() || selectedFile.replace(/\.xml$/i, '.sql');
+        let outputFile = outputAnswer.trim() || selectedFile.replace(/\.xml$/i, '.sql');
+        
+        // Verificar si el archivo de salida tiene extensión .sql
+        if (outputFile && !outputFile.toLowerCase().endsWith('.sql')) {
+          outputFile += '.sql';
+        }
+        
         rl.close();
         processXmlFile(selectedFile, outputFile);
       });
@@ -113,7 +119,13 @@ function showInteractiveMenu() {
         
         const defaultOutput = customPath.replace(/\.xml$/i, '.sql');
         rl.question(`\n📄 Nombre del archivo SQL de salida (Enter para: ${path.basename(defaultOutput)}): `, (outputAnswer) => {
-          const outputFile = outputAnswer.trim() || defaultOutput;
+          let outputFile = outputAnswer.trim() || defaultOutput;
+          
+          // Verificar si el archivo de salida tiene extensión .sql
+          if (outputFile && !outputFile.toLowerCase().endsWith('.sql')) {
+            outputFile += '.sql';
+          }
+          
           rl.close();
           processXmlFile(customPath, outputFile);
         });
