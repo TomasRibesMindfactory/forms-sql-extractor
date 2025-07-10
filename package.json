@@ -6,7 +6,7 @@
     "start": "node extract_forms_sql.js",
     "demo": "node demo.js",
     "help": "node demo.js 3",
-    "test": "node extract_forms_sql.js aufa0030_cba_fmb.xml test_output.sql"
+    "test": "node extract_forms_sql.js mi_entrada.xml test_output.sql"
   },
   "keywords": [],
   "author": "",

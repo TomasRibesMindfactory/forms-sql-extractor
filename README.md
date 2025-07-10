@@ -51,7 +51,7 @@ Salida:
 ═══════════════════════════════════════════
 
 🔍 Archivos XML disponibles:
-  1. aufa0030_cba_fmb.xml
+  1. mi_entrada.xml
   2. Especificar ruta personalizada
   0. Salir
 
@@ -60,13 +60,13 @@ Salida:
 
 ### Ejemplo 2: Con Argumentos
 ```bash
-node extract_forms_sql.js aufa0030_cba_fmb.xml mi_salida.sql
+node extract_forms_sql.js mi_entrada.xml mi_salida.sql
 ```
 
 ### Ejemplo 3: Auto-detección de nombre de salida
 ```bash
-node extract_forms_sql.js aufa0030_cba_fmb.xml
-# Genera: aufa0030_cba_fmb.sql
+node extract_forms_sql.js mi_entrada.xml
+# Genera: mi_entrada.sql
 ```
 
 ## 📂 Estructura del Proyecto

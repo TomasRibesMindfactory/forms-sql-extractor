@@ -28,7 +28,7 @@ switch (choice) {
     
   case '2':
     console.log('🚀 Ejemplo con argumentos de línea de comandos...\n');
-    const withArgs = spawn('node', ['extract_forms_sql.js', 'aufa0030_cba_fmb.xml', 'output_demo.sql'], {
+    const withArgs = spawn('node', ['extract_forms_sql.js', 'mi_entrada.xml', 'output_demo.sql'], {
       stdio: 'inherit',
       cwd: __dirname
     });
@@ -45,8 +45,8 @@ switch (choice) {
     console.log('    node extract_forms_sql.js <archivo_xml> [archivo_sql_salida]');
     console.log('');
     console.log('  Ejemplos:');
-    console.log('    node extract_forms_sql.js aufa0030_cba_fmb.xml');
-    console.log('    node extract_forms_sql.js aufa0030_cba_fmb.xml mi_salida.sql');
+    console.log('    node extract_forms_sql.js mi_entrada.xml');
+    console.log('    node extract_forms_sql.js mi_entrada.xml mi_salida.sql');
     console.log('');
     console.log('  Ejecutar demo:');
     console.log('    node demo.js 1  # Modo interactivo');
